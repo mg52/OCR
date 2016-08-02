@@ -1,6 +1,6 @@
 # OCR with Javascript
 
-There is my simple OCR library written in Javascript. I used Phaser Game Framework for background.
+There is my simple OCR library written in Javascript. It recognizes only numbers (for now). I used Phaser Game Framework for background.
 The file MusskyOCR.js is the main OCR algorithm file. Other files are for drawing canvas stuff.
 
 You need to draw at once. When you mouseup, the algorithm begins to recognize. (Maybe a recognize button can be added after drawing something.) 
