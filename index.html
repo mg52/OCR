@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, height=device-height">
+    <title></title>
+	    	<style>
+    			body{
+					margin:0;
+				}
+    		</style>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+
+    <!-- your app's js -->
+    <script src="lib/phaser/phaser.min.js"></script>
+    <script src="js/boot.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/main.js"></script>
+	<script src="js/musskyOCR.js"></script>
+
+  </head>
+  <body>
+	<script>
+			(function() {
+				var game = new Phaser.Game(360, 640, Phaser.CANVAS, 'game');
+				game.state.add('boot', boot);
+				game.state.add('preloader', preloader);
+				game.state.add('main', main);
+				game.state.start('boot');
+			})();
+		</script>
+  </body>
+</html>
