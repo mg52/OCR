@@ -38,7 +38,7 @@ main = function (game) {
 		},
 		onUp : function () {
 			//console.log('Up');
-			console.log(drawArray.length);
+			//console.log(drawArray.length);
 			if (drawArray.length > 2) {
 				recognizedNumber = recognize(bmd.ctx, 720, 1280);
 			} else {
