@@ -47,27 +47,30 @@ function recognize(imag, imagWidth, imagHeight) {
 	for (var i = 0; i < probArray.length; i++) {
 		if (probArray[i] < prob) {
 			prob = probArray[i];
+			index = i;
 		}
 	}
 
-	for (var i = 0; i < probArray.length; i++) {
-		if (prob == probArray[i]) {
-			if (i == 10) {
-				result = '^';
-			} else if (i == 11) {
-				result = 'V';
-			} else if (i == 12) {
-				result = 'S';
-			} else if (i == 13) {
-				result = 'M';
-			} else if (i == 14) {
-				result = 'W';
-			} else if (i == 15) {
-				result = 'P';
-			} else
-				result = i;
+	if(prob < 14){
+		if (index == 10) {
+			result = 'A';
+		} else if (index == 11) {
+			result = 'V';
+		} else if (index == 12) {
+			result = 'S';
+		} else if (index == 13) {
+			result = 'M';
+		} else if (index == 14) {
+			result = 'W';
+		} else if (index == 15) {
+			result = 'P';
+		}else
+			result = index;
 		}
+	else{
+		result = '?';
 	}
+	
 
 	/* Start Correction Steps */
 	if (result == 5 && (resultArray[18] == 1 || resultArray[19] == 1 || resultArray[28] == 1 || resultArray[29] == 1)) {
