@@ -1,4 +1,6 @@
 function recognize(imag, imagWidth, imagHeight) {
+	console.log('*************** START ***************');
+	
 	var width = 10,
 	height = 10;
 	var resultArray = downsample(imag, imagWidth, imagHeight, width, height);
@@ -96,7 +98,9 @@ function recognize(imag, imagWidth, imagHeight) {
 	/* End Correction Steps */
 	console.log('probArray: ' + probArray);
 	console.log('result: ' + result + ', probability: ' + prob);
-
+	
+	console.log('*************** END ***************');
+	
 	return result;
 }
 
